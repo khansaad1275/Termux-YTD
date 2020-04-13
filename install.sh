@@ -31,7 +31,7 @@ mkdir ~/bin
 
 echo -e "Creating Termux-URL-Opener Script.\n"
 
-mv termux-url-opener.bs ~/bin/termux-url-opener
+mv termux-url-opener.sh ~/bin/termux-url-opener
 
 echo -e "\n"
 echo -e "\e[032m" "Process Complete!"
