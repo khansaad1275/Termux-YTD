@@ -10,7 +10,7 @@ Website🌎: www.Learntermux.tech <br>
 Instagram : https://www.instagram.com/skhan_official/ <br>
 
 ### Installation:
-Just paste the below code in your termux and Done!. Everything will be automatically installed exept allowing storage permissions(So allow storage Permission when script ask and then its done.).
+Just paste the below code in your termux and Done!. Everything will be automatically installed exept allowing storage permissions(So allow storage Permission when script ask and then its done.).<br>
 ```cd && pkg install git -y && git clone https://github.com/khansaad1275/Termux-YTD/ && cd Termux-YTD && bash install.sh```
 
 ### Run the script:
