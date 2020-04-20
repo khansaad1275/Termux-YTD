@@ -20,7 +20,7 @@ pkg install python -y
 echo -e "\e[034m"  "Installing youtube-dl\n"
 pip install youtube-dl
 
-echo -e "\e[032m"  "Making thw Youtube Directory to download the Vidoes\n"
+echo -e "\e[032m"  "Making the Youtube Directory to download the Vidoes\n"
 mkdir ~/storage/shared/Youtube
 
 echo -e "\e[036m"  "Creating youtube-dl folder for config\n"
