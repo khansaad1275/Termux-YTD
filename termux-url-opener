@@ -17,7 +17,7 @@ echo -e "\e[032m" "╠═▶ 4. Video 𝟳𝟮𝟬𝗽"
 echo -e "\e[032m" "╠═▶ 5. Video 𝟭𝟬𝟴𝟬𝗽"
 
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
-read -pe "\e[032m" "╚═➤" option
+read -p "╚═➤" option
 
 if [ "$option" -eq "1" ]
 then
