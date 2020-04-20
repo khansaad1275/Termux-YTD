@@ -15,7 +15,6 @@ echo -e "\e[032m" "╠═▶ 2. Video 𝟯𝟲𝟬𝗽"
 echo -e "\e[032m" "╠═▶ 3. Video 𝟰𝟴𝟬𝗽"
 echo -e "\e[032m" "╠═▶ 4. Video 𝟳𝟮𝟬𝗽"
 echo -e "\e[032m" "╠═▶ 5. Video 𝟭𝟬𝟴𝟬𝗽"
-echo  
 
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
 read -pe "\e[032m" "╚═➤" option
