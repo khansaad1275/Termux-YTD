@@ -11,11 +11,11 @@ echo -e "\e[032m" "║ ♚ Github : g̲i̲t̲h̲u̲b̲.̲c̲o̲m̲/̲k̲h̲a̲n�
 echo -e "\e[032m" "║ ♚ Website : www.LearnTermux.tech       ║"
 echo -e "\e[036m" "╠════════════════════════════════════════╝"
 echo -e "\e[036m" "╠═▶ 𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁 ➳"
-echo -e "\e[032m" "╠═▶ 1. Music 𝗠𝗽𝟯♫"
-echo -e "\e[032m" "╠═▶ 2. Video 𝟯𝟲𝟬𝗽"
-echo -e "\e[032m" "╠═▶ 3. Video 𝟰𝟴𝟬𝗽"
-echo -e "\e[032m" "╠═▶ 4. Video 𝟳𝟮𝟬𝗽"
-echo -e "\e[032m" "╠═▶ 5. Video 𝟭𝟬𝟴𝟬𝗽"
+echo -e "\e[032m" "╠═▶ 1. Music Mp3♫"
+echo -e "\e[032m" "╠═▶ 2. Video 360p"
+echo -e "\e[032m" "╠═▶ 3. Video 480p"
+echo -e "\e[032m" "╠═▶ 4. Video 720p"
+echo -e "\e[032m" "╠═▶ 5. Video 1080p"
 
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
 read -p " ╚═➤ " option
