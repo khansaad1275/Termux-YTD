@@ -1,11 +1,8 @@
 # Termux-YTD
 #### Termux-YouTube-Downloader
 This is The latest Script For Downloading Youtube Videos with your Termux. Download any Youtube Video in 2 Liks.
-
 <br>
-<hr>
 <br>
-
 ### Me:
 Author👨‍💻: https://github.com/khansaad1275 <br>
 
