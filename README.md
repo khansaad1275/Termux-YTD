@@ -22,12 +22,15 @@ Just open youtube and Choose the Video You want to download and then:
 2. Now Select the format of your video and then it will start downloading that video.
 <br>
 <br>
+
 ### Features:
 - See The Downloading Process.
 - Download any Video in Just 2 Click.
 - Select the Quality Of your Video.
 - Downlaod Mp3 Version of the Video.
+
 <br>
 <br>
+
 ### Special_Thanks:
 <a href="https://techwiser.com/how-to-use-termux-to-download-youtube-videos/">Techwiser.com</a>
