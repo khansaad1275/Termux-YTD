@@ -29,5 +29,5 @@ Just open youtube and Choose the Video You want to download and then:
 - Downlaod Mp3 Version of the Video.
 <br>
 <br>
-### Special Thanks:
+### Special_Thanks:
 <a href="https://techwiser.com/how-to-use-termux-to-download-youtube-videos/">Techwiser.com</a>
