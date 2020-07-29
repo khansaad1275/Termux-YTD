@@ -1,7 +1,9 @@
+
+ 
 #!/data/data/com.termux/files/usr/bin/bash
-# Project name : Termux-YTD
-# Coded by: Khansaad1275 (You dont become a coder by just changing the credits)
-# Github: https://github.com/khansaad1275/Termux-YTD
+# Project name : Mrravanan-YTD
+# Coded by: MR RAVANAN(You dont become a coder by just changing the credits)
+# Instagram : mr._r_a_v_a_n_a_n_
 # Date : 14/4/2020
 
 echo -e "\e[035m"  "Updating default packages\n"
