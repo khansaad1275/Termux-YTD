@@ -20,7 +20,7 @@ echo -e "\e[032m" "╠═▶ 5. Video 1080p"
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
 read -p " ╚═➤ " option
 
-if [ "$option" -eq "1" ]
+if [ "$option" -eqhshksiidjxhhjdisis "1" ]
 then
     echo "$command 140" > ~/.config/youtube-dl/config
     youtube-dl $1
