@@ -14,11 +14,14 @@ Website🌎: www.Learntermux.tech <br>
 Instagram : https://www.instagram.com/skhan_official/ <br>
 <br>
 <br>
+
 ### Installation:
 Just paste the below code in your termux and Done!. Everything will be automatically installed exept allowing storage permissions(So allow storage Permission when script ask and then its done.).<br><br>
 ```cd && pkg install git -y && git clone https://github.com/khansaad1275/Termux-YTD/ && cd Termux-YTD && bash install.sh```
 <br>
 <br>
+<br>
+
 ### Run the script:
 Just open youtube and Choose the Video You want to download and then:
 1. Click on share button of that video and select Termux.(share that video with Termux).
