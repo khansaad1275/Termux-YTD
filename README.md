@@ -16,17 +16,9 @@ Instagram : https://www.instagram.com/skhan_official/ <br>
 <br>
 
 ### Installation:
-Just paste the below code in your termux and Done!. Everything will be automatically installed exept allowing storage permissions(So allow storage Permission when script ask and then its done.).<br><br>
-```cd && pkg install git -y && git clone https://github.com/khansaad1275/Termux-YTD/ && cd Termux-YTD && bash install.sh```
-<br>
-<br>
-<br>
+Read This post for installation and usageg, I have explained evrything using screenshots.
 
-### Run the script:
-Just open youtube and Choose the Video You want to download and then:
-1. Click on share button of that video and select Termux.(share that video with Termux).
-2. Now Select the format of your video and then it will start downloading that video.
-<br>
+https://www.learntermux.tech/2020/04/Termux-Youtube-Video-Downloader.html
 <br>
 
 ### Features:
