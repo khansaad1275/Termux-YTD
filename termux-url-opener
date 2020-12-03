@@ -1,47 +1,85 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-echo -e "\e[031m" "──────▄▀▄─────▄▀▄"
-echo -e "\e[031m" "─────▄█░░▀▀▀▀▀░░█▄"
-echo -e "\e[031m" "─▄▄──█░░░░░░░░░░░█──▄▄"
-echo -e "\e[031m" "█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█"
+clear
+kill_color=$'\e[0m'
+command -v youtube-dl &>/dev/null || printf "\e[031m Please install Youtube-dl manualy or run the the install.sh script again.\n$kill_color"
+
+#uncomment me if you wish :)
+#[[ -f ~/bin ]] || printf "\e[031m Please Run the the install.sh script.\n$kill_color"
+while :
+do
+
+#kill_color=$'\e[0m'
+
+
+echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
+echo -e "\e[031m" "         ▄█░░▀▀▀▀▀░░█▄"
+echo -e "\e[031m" "     ▄▄  █░░░░░░░░░░░█  ▄▄"
+echo -e "\e[031m" "    █▄▄█ █░░█░░┬░░█░░█ █▄▄█"
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
 echo -e "\e[032m" "║ ♚ Project Name : 🆃🅴🆁🅼🆄🆇-🆈🆃🅳™           ║"
 echo -e "\e[032m" "║ ♚ Author : KhanSaad1275                ║"
 echo -e "\e[032m" "║ ♚ Github : g̲i̲t̲h̲u̲b̲.̲c̲o̲m̲/̲k̲h̲a̲n̲s̲a̲a̲d̲1̲2̲7̲5̲/̲    ║"
 echo -e "\e[032m" "║ ♚ Website : www.LearnTermux.tech       ║"
 echo -e "\e[036m" "╠════════════════════════════════════════╝"
-echo -e "\e[036m" "╠═▶ 𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁 ➳"
+echo -e "\e[036m" "╠═▶ [𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁]  ➳"
 echo -e "\e[032m" "╠═▶ 1. Music Mp3♫"
 echo -e "\e[032m" "╠═▶ 2. Video 360p"
 echo -e "\e[032m" "╠═▶ 3. Video 480p"
 echo -e "\e[032m" "╠═▶ 4. Video 720p"
 echo -e "\e[032m" "╠═▶ 5. Video 1080p"
-
+echo -e "\e[032m" "╠═▶ 6. Exit Termux-YTD" # Added
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
-read -p " ╚═➤ " option
 
-if [ "$option" -eq "1" ]
-then
-    echo "$command 140" > ~/.config/youtube-dl/config
-    youtube-dl $1
+#Edit From Oak Atsume 
+printf "\e[032m ╚═:➤  $kill_color"
+read option
 
-elif [ "$option" -eq "2" ]
+if [[ -z $option ]];
 then
-    echo "$command \"best[height<=360]\"" > ~/.config/youtube-dl/config
-    youtube-dl $1
-
-elif [ "$option" -eq "3" ]
-then
-    echo "$command \"best[height<=480]\"" > ~/.config/youtube-dl/config
-    youtube-dl $1
-
-elif [ "$option" -eq "4" ]
-then
-    echo "$command \"best[height<=720]\"" > ~/.config/youtube-dl/config
-    youtube-dl $1
-
-elif [ "$option" -eq "5" ]
-then
-    echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config
-    youtube-dl $1
+	clear
+	printf "\e[031m Please choose a option!\n$kill_color"
+else
+case $option in #Make Case list
+	1)
+	echo "$command 140" > ~/.config/youtube-dl/config #option 1
+	youtube-dl $1
+	;;
+	2)
+	echo "$command \"best[height<=360]\"" > ~/.config/youtube-dl/config #option 2
+	youtube-dl $1
+	;;
+	3)
+	echo "$command \"best[height<=480]\"" > ~/.config/youtube-dl/config #option 3
+	youtube-dl $1
+	;;
+	4)
+	echo "$command \"best[height<=720]\"" > ~/.config/youtube-dl/config #option 4
+	youtube-dl $1
+	;;
+	5)
+	echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config #option 5
+	youtube-dl $1
+	;;
+	6)
+	break
+	;;
+esac 
 fi
+
+
+#There's a cat on the code!!
+#          ▄▀▄     ▄▀▄
+#         ▄█░░▀▀▀▀▀░░█▄
+#     ▄▄  █░░░░░░░░░░░█  ▄▄
+#    █▄▄█ █░░█░░┬░░█░░█ █▄▄█
+
+#Oh hey there It's me Oak I have no idea how youtube-dl works but i came across this github and saw the messy code and gave it a better look hope it helps :D 
+
+#I wanted to mess a little with the Download code but didn't 
+
+#email: Kamilohulau@gmail.com
+#Date: Wed Dec  2 15:48:19 PST 2020#
+#Project name : Termux-YTD#
+#Github: https://github.com/khansaad1275/Termux-YTD#
+done
