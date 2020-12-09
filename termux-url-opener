@@ -16,6 +16,7 @@ echo -e "\e[032m" "╠═▶ 2. Video 360p"
 echo -e "\e[032m" "╠═▶ 3. Video 480p"
 echo -e "\e[032m" "╠═▶ 4. Video 720p"
 echo -e "\e[032m" "╠═▶ 5. Video 1080p"
+echo -e "\e[032m" "╠═▶ 6. Video 2160p"
 
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
 read -p " ╚═➤ " option
@@ -43,5 +44,9 @@ then
 elif [ "$option" -eq "5" ]
 then
     echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config
+    youtube-dl $1
+elif [ "$option" -eq "6" ]
+then
+    echo "$command \"best[height<=2160]\"" > ~/.config/youtube-dl/config
     youtube-dl $1
 fi
