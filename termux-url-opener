@@ -6,10 +6,6 @@ command -v youtube-dl &>/dev/null || printf "\e[031m Please install Youtube-dl m
 
 #uncomment me if you wish :)
 #[[ -f ~/bin ]] || printf "\e[031m Please Run the the install.sh script.\n$kill_color"
-while :
-do
-
-#kill_color=$'\e[0m'
 
 
 echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
@@ -82,4 +78,3 @@ fi
 #Date: Wed Dec  2 15:48:19 PST 2020#
 #Project name : Termux-YTD#
 #Github: https://github.com/khansaad1275/Termux-YTD#
-done
