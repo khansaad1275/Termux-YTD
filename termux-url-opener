@@ -24,7 +24,8 @@ echo -e "\e[032m" "╠═▶ 2. Video 360p"
 echo -e "\e[032m" "╠═▶ 3. Video 480p"
 echo -e "\e[032m" "╠═▶ 4. Video 720p"
 echo -e "\e[032m" "╠═▶ 5. Video 1080p"
-echo -e "\e[032m" "╠═▶ 6. Exit Termux-YTD" # Added
+echo -e "\e[032m" "╠═▶ 6. Video 2160p"
+echo -e "\e[032m" "╠═▶ 7. Exit Termux-YTD" # Added
 command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f'
 
 #Edit From Oak Atsume 
@@ -58,6 +59,10 @@ case $option in #Make Case list
 	youtube-dl $1
 	;;
 	6)
+	echo "$command \"best[height<=2160]\"" > ~/.config/youtube-dl/config
+    	youtube-dl $1
+	;;
+	7)
 	break
 	;;
 esac 
