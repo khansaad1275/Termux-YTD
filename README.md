@@ -7,11 +7,10 @@ This is The latest Script For Downloading Youtube Videos with your Termux. Downl
 <br>
 
 ### Me:
-Author👨‍💻: https://github.com/khansaad1275 <br>
+Author👨‍💻: Ashok Kanuka <br>
 
-Website🌎: www.Learntermux.tech <br>
-
-Instagram : https://www.instagram.com/skhan_official/ <br>
+Website🌎: ashokkanuka.com <br>
+email : ashokkanuka29@gmail.com
 <br>
 <br>
 
