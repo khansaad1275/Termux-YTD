@@ -17,8 +17,8 @@ sleep 2
 termux-setup-storage 
 sleep 5
 
-echo -e "\e[033m" "Installing python\n"
-pkg install python -y
+#echo -e "\e[033m" "Installing python\n"
+#pkg install python -y
 
 echo -e "\e[034m"  "Installing youtube-dl\n"
 pip install youtube-dl
