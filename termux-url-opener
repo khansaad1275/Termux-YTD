@@ -4,9 +4,6 @@ clear
 kill_color=$'\e[0m'
 command -v youtube-dl &>/dev/null || printf "\e[031m Please install Youtube-dl manualy or run the the install.sh script again.\n$kill_color"
 
-#uncomment me if you wish :)
-#[[ -f ~/bin ]] || printf "\e[031m Please Run the the install.sh script.\n$kill_color"
-
 
 echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
 echo -e "\e[031m" "         ▄█░░▀▀▀▀▀░░█▄"
@@ -39,27 +36,27 @@ then
 else
 case $option in #Make Case list
 	1)
-	echo "$command 140" > ~/.config/youtube-dl/config #option 1
+	echo "$command -i 140" > ~/.config/youtube-dl/config #option 1
 	youtube-dl $1
 	;;
 	2)
-	echo "$command \"best[height<=360]\"" > ~/.config/youtube-dl/config #option 2
+	echo "$command -i \"best[height<=360]\"" > ~/.config/youtube-dl/config #option 2
 	youtube-dl $1
 	;;
 	3)
-	echo "$command \"best[height<=480]\"" > ~/.config/youtube-dl/config #option 3
+	echo "$command -i \"best[height<=480]\"" > ~/.config/youtube-dl/config #option 3
 	youtube-dl $1
 	;;
 	4)
-	echo "$command \"best[height<=720]\"" > ~/.config/youtube-dl/config #option 4
+	echo "$command -i \"best[height<=720]\"" > ~/.config/youtube-dl/config #option 4
 	youtube-dl $1
 	;;
 	5)
-	echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config #option 5
+	echo "$command -i \"best[height<=1080]\"" > ~/.config/youtube-dl/config #option 5
 	youtube-dl $1
 	;;
 	6)
-	echo "$command \"best[height<=2160]\"" > ~/.config/youtube-dl/config
+	echo "$command -i \"best[height<=2160]\"" > ~/.config/youtube-dl/config
     	youtube-dl $1
 	;;
 	7)
