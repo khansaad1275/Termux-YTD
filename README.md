@@ -9,8 +9,7 @@ This is The latest Script For Downloading Youtube Videos with your Termux. Downl
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
   <img src="https://img.shields.io/github/license/khansaad1275/Termux-YTD?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/khansaad1275Solve Ngrok Error in Termux with Cloudflare
-ermux-YTD?color=violet&style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/khansaad1275/Termux-YTD?color=violet&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/khansaad1275/Termux-YTD?color=teal&style=for-the-badge">
   <img src="https://img.shields.io/github/stars/khansaad1275/Termux-YTD?style=for-the-badge">
 </p>
