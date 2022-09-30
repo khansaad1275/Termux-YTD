@@ -36,7 +36,7 @@ then
 else
 case $option in #Make Case list
 	1)
-	echo "$command -i 140" > ~/.config/youtube-dl/config #option 1
+	echo "$command 140" > ~/.config/youtube-dl/config #option 1
 	youtube-dl $1
 	;;
 	2)
