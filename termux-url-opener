@@ -5,15 +5,16 @@ kill_color=$'\e[0m'
 command -v youtube-dl &>/dev/null || printf "\e[031m Please install Youtube-dl manualy or run the the install.sh script again.\n$kill_color"
 
 
-echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
-echo -e "\e[031m" "         ▄█░░▀▀▀▀▀░░█▄"
-echo -e "\e[031m" "     ▄▄  █░░░░░░░░░░░█  ▄▄"
-echo -e "\e[031m" "    █▄▄█ █░░█░░┬░░█░░█ █▄▄█"
+echo -e "\e[031m" "         
+echo -e "\e[031m" "    
+echo -e "\e[031m" "    
+echo -e "\e[031m" "    
 echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
-echo -e "\e[032m" "║ ♚ Project Name : 🆃🅴🆁🅼🆄🆇-🆈🆃🅳™           ║"
-echo -e "\e[032m" "║ ♚ Author : KhanSaad1275                ║"
-echo -e "\e[032m" "║ ♚ Github : g̲i̲t̲h̲u̲b̲.̲c̲o̲m̲/̲k̲h̲a̲n̲s̲a̲a̲d̲1̲2̲7̲5̲/̲    ║"
-echo -e "\e[032m" "║ ♚ Website : www.LearnTermux.tech       ║"
+echo -e "\e[032m" "║ ♚ Project Name : YouTube Downloader
+echo -e "\e[032m" "║ ♚ Author : Mantu Kumar
+
+echo -e "\e[032m" "║ ♚  
+echo -e "\e[032m" "║ ♚
 echo -e "\e[036m" "╠════════════════════════════════════════╝"
 echo -e "\e[036m" "╠═▶ [𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁]  ➳"
 echo -e "\e[032m" "╠═▶ 1. Music Mp3♫"
@@ -66,17 +67,6 @@ esac
 fi
 
 
-#There's a cat on the code!!
-#          ▄▀▄     ▄▀▄
-#         ▄█░░▀▀▀▀▀░░█▄
-#     ▄▄  █░░░░░░░░░░░█  ▄▄
-#    █▄▄█ █░░█░░┬░░█░░█ █▄▄█
 
-#Oh hey there It's me Oak I have no idea how youtube-dl works but i came across this github and saw the messy code and gave it a better look hope it helps :D 
 
-#I wanted to mess a little with the Download code but didn't 
 
-#email: Kamilohulau@gmail.com
-#Date: Wed Dec  2 15:48:19 PST 2020#
-#Project name : Termux-YTD#
-#Github: https://github.com/khansaad1275/Termux-YTD#
