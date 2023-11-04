@@ -1,0 +1,15 @@
+# ATTENTION
+# This file can be modified with other flags
+# If you want to know more about how to use this tool, read about it in https://github.com/yt-dlp/yt-dlp
+
+--no-mtime
+# Activate quiet mode
+--quiet
+# Show progress bar, even if in quiet mode
+--progress
+# Overwrite all video and metadata files.
+--force-overwrites
+# Continue with next video on download errors;e.g. to skip unavailable videos in a playlist (default)
+--no-abort-on-error
+# Defines the path where the videos will be saved and the format the filenames will have
+-o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s

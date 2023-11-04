@@ -25,26 +25,39 @@ if ! apt-cache pkgnames | grep "^python$" &>/dev/null; then
   apt-get install python -y
 fi
 
-# Install the youtube-dl python module if it isnt installed.
-if ! pip list | grep "^youtube-dl" &>/dev/null; then
-  printf '\e[0;36mInstalling youtube-dl\e[0m\n'
+# Install the yt-dlp python module if it isnt installed.
+if ! pip list | grep "^yt-dlp" &>/dev/null; then
+  printf '\e[0;36mInstalling yt-dlp\e[0m\n'
   sleep 2
-  pip install youtube-dl
+  pip install yt-dlp
 fi
 
 # Create the output directory if needed.
-if [ ! -d "${TERMUX_HOME}/storage/shared/Youtube" ]; then
+
+OUTPUT_PATH="${TERMUX_HOME}/storage/shared/Youtube"
+
+if [ ! -d "${OUTPUT_PATH}" ]; then
   printf '\e[0;36mCreating output directory at "~/storage/shared/Youtube"\e[0m\n'
   sleep 2
-  mkdir "${TERMUX_HOME}/storage/shared/Youtube"
+  mkdir "${OUTPUT_PATH}"
 fi
 
 # Create the directory for our config file.
-if [ ! -d "${TERMUX_HOME}/.config/youtube-dl" ]; then
-  printf '\e[0;36mCreating config directory for youtube-dl\e[0m\n'
+
+CONFIG_FOLDER="${TERMUX_HOME}/.yt-dlp"
+
+if [ ! -d "{$CONFIG_FOLDER}"]; then
+  printf '\e[0;36mCreating config directory for yt-dlp\e[0m\n'
   sleep 2
-  mkdir -p "${TERMUX_HOME}/.config/youtube-dl"
+  mkdir -p "{$CONFIG_FOLDER}"
 fi
+
+# Copy the config file for yt-dlp in the valid directory
+# (If there is already a config file, we ask if the user wants to overwrite it)
+#if [ ! -e "{$CONFIG_FOLDER}/yt-dlp.conf"]; then
+printf '\e[0;36mCreating config file for yt-dlp\e[0m\n'
+cp -i config "{$CONFIG_FOLDER}/config"
+#fi
 
 # Install the url opener.
 printf '\e[0;36mInstalling Termux-YTD\e[0m\n'

@@ -2,7 +2,7 @@
 
 clear
 kill_color=$'\e[0m'
-command -v youtube-dl &>/dev/null || printf "\e[031m Please install Youtube-dl manualy or run the the install.sh script again.\n$kill_color"
+command -v yt-dlp || printf "\e[031m Please install yt-dlp manually or run the the install.sh script again.\n$kill_color"
 
 
 echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
@@ -23,7 +23,6 @@ echo -e "\e[032m" "╠═▶ 4. Video 720p"
 echo -e "\e[032m" "╠═▶ 5. Video 1080p"
 echo -e "\e[032m" "╠═▶ 6. Video 2160p"
 echo -e "\e[032m" "╠═▶ 7. Exit Termux-YTD" # Added
-command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -i -f'
 
 #Edit From Oak Atsume 
 printf "\e[032m ╚═:➤  $kill_color"
@@ -36,31 +35,25 @@ then
 else
 case $option in #Make Case list
 	1)
-	echo "$command 140" > ~/.config/youtube-dl/config #option 1
-	youtube-dl $1
+	yt-dlp -f 140 $1
 	;;
 	2)
-	echo "$command \"best[height<=360]\"" > ~/.config/youtube-dl/config #option 2
-	youtube-dl $1
+	yt-dlp -f \"best[height<=360]\" $1
 	;;
 	3)
-	echo "$command \"best[height<=480]\"" > ~/.config/youtube-dl/config #option 3
-	youtube-dl $1
+	yt-dlp -f \"best[height<=480]\" $1
 	;;
 	4)
-	echo "$command \"best[height<=720]\"" > ~/.config/youtube-dl/config #option 4
-	youtube-dl $1
+	yt-dlp -f \"best[height<=720]\" $1
 	;;
 	5)
-	echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config #option 5
-	youtube-dl $1
+	yt-dlp -f \"best[height<=1080]\" $1
 	;;
 	6)
-	echo "$command \"best[height<=2160]\"" > ~/.config/youtube-dl/config
-    	youtube-dl $1
+  yt-dlp -f \"best[height<=2160]\" $1
 	;;
 	7)
-	break
+	exit 0
 	;;
 esac 
 fi
@@ -72,9 +65,29 @@ fi
 #     ▄▄  █░░░░░░░░░░░█  ▄▄
 #    █▄▄█ █░░█░░┬░░█░░█ █▄▄█
 
-#Oh hey there It's me Oak I have no idea how youtube-dl works but i came across this github and saw the messy code and gave it a better look hope it helps :D 
+#Oh hey there It's me Oak I have no idea how youtube-dl (now yt-dlp) works but i came across this github and saw the messy code and gave it a better look hope it helps :D 
 
 #I wanted to mess a little with the Download code but didn't 
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+#There's another cat on the code!! (this one is prepared to fight)
+# ───▄▄─▄████▄▐▄▄▄▌
+# ──▐──████▀███▄█▄▌
+# ▐─▌──█▀▌──▐▀▌▀█▀
+# ─▀───▌─▌──▐─▌
+# ─────█─█──▐▌█
+# Hi, I'm cosmic3d
+# I was just wondering if there was any cool way of downloading youtube videos without the need to
+# visit these awful and uncomfortable websites infested with ads.
+# I found this repository and realized there was an unsolved error related with the youtube-dl command.
+# I was really bored and I thought this would be really useful for me, so if you dont
+# merge my changes its okay :)
+#  ,_,
+# (O,O)
+# (   )
+# -"-"
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 #email: Kamilohulau@gmail.com
 #Date: Wed Dec  2 15:48:19 PST 2020#
