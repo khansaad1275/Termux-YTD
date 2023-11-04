@@ -46,17 +46,17 @@ fi
 
 CONFIG_FOLDER="${TERMUX_HOME}/.yt-dlp"
 
-if [ ! -d "{$CONFIG_FOLDER}"]; then
+if [ ! -d "${CONFIG_FOLDER}" ]; then
   printf '\e[0;36mCreating config directory for yt-dlp\e[0m\n'
   sleep 2
-  mkdir -p "{$CONFIG_FOLDER}"
+  mkdir -p "${CONFIG_FOLDER}"
 fi
 
 # Copy the config file for yt-dlp in the valid directory
 # (If there is already a config file, we ask if the user wants to overwrite it)
 #if [ ! -e "{$CONFIG_FOLDER}/yt-dlp.conf"]; then
 printf '\e[0;36mCreating config file for yt-dlp\e[0m\n'
-cp -i config "{$CONFIG_FOLDER}/config"
+cp -i config "${CONFIG_FOLDER}/config"
 #fi
 
 # Install the url opener.
