@@ -21,7 +21,8 @@ RESET="\e[0m"
 
 clear
 command -v yt-dlp || printf "${RED_B} Please install yt-dlp manually or run the the install.sh script again.\n${RESET}"
-
+OUTPUT_PATH="/storage/emulated/0/Youtube"
+TYPE="video"
 
 echo -e "${RED}" "          ▄▀▄     ▄▀▄"
 echo -e "${RED}" "         ▄█░░▀▀▀▀▀░░█▄"
@@ -49,11 +50,12 @@ read option
 if [[ -z $option ]];
 then
 	clear
-	printf "${RED} Please choose a option!\n${RESET}"
+	printf "${RED_B} Please choose a option!\n${RESET}"
 else
 case $option in #Make Case list
 	1)
 	yt-dlp -f 140 $1
+	TYPE="audio"
 	;;
 	2)
 	yt-dlp -f "best[height<=360]" $1
@@ -76,7 +78,23 @@ case $option in #Make Case list
 esac 
 fi
 
-termux-media-scan -v -r /storage/emulated/0/Youtube
+if [ $? -eq 0 ]; then
+  printf "${GREEN_B}${TYPE} correctly downloaded at ${OUTPUT_PATH} !${RESET}\n"
+else
+  printf "${RED_B}There was an error when download the ${TYPE}!${RESET}\n"
+	exit 0
+fi
+
+if [-n $TERMUX_API_VERSION]; then
+printf "${YELLOW_B}Scanning ${OUTPUT_PATH}${RESET}\n"
+termux-media-scan -v -r "${OUTPUT_PATH}"
+	if [ $? -eq 0 ]; then
+  	printf "${GREEN_B}${OUTPUT_PATH} correctly scanned${RESET}\n"
+	else
+  	printf "${RED_B}An error occurred during the ${OUTPUT_PATH} scanning${RESET}\n"
+	fi
+fi
+
 
 #There's a cat on the code!!
 #          ▄▀▄     ▄▀▄

@@ -6,12 +6,22 @@
 # Date : 14/4/2020
 
 # COLORS
-GREEN="\e[01;32m"
-CYAN="\e[01;36m"
-MAGENTA="\e[01;35m"
-YELLOW="\e[01;33m"
-BLUE="\e[01;34m"
-RED="\e[01;31m"
+GREEN="\e[32m"
+CYAN="\e[36m"
+MAGENTA="\e[35m"
+YELLOW="\e[33m"
+BLUE="\e[34m"
+RED="\e[31m"
+
+# BOLD COLORS
+GREEN_B="\e[01;32m"
+CYAN_B="\e[01;36m"
+MAGENTA_B="\e[01;35m"
+YELLOW_B="\e[01;33m"
+BLUE_B="\e[01;34m"
+RED_B="\e[01;31m"
+
+# RESET
 RESET="\e[0m"
 
 TERMUX_HOME="/data/data/com.termux/files/home"
@@ -61,31 +71,37 @@ fi
 # (If there is already a config file, we ask if the user wants to overwrite it)
 printf "${CYAN}Creating config file for yt-dlp${RESET}\n"
 cp -i config "${CONFIG_FOLDER}/config"
+sleep 1
 
 # Install the url opener.
 printf "${BLUE}Installing Termux-YTD${RESET}\n"
+sleep 2
 mkdir -p "${TERMUX_HOME}/bin"
 cp -f termux-url-opener "${TERMUX_HOME}/bin/termux-url-opener"
 chmod +x "${TERMUX_HOME}/bin/termux-url-opener"
-sleep 2
 
 # Install the termux API and inform the user about system gallery settings.
-printf "${RED}WARNING!!! ${RESET}\n${YELLOW}By default, the videos you download won't appear in your system gallery, and therefore you won't be able to use them.\n"
-printf "If you wish to see the video appear in your gallery, you'll have to install the ${MAGENTA}termux-api app${RESET} via ${MAGENTA}F-Droid app${RESET}\n"
+printf "${RED_B}WARNING!!! ${RESET}\n${YELLOW}By default, the videos you download won't appear in your system gallery, and therefore you won't be able to use them.\n"
+printf "If you wish to see the video appear in your gallery, you'll have to install the ${MAGENTA}Termux:API app${RESET} via ${MAGENTA_B}${TERMUX_APK_RELEASE}${RESET}\n"
 
-read -rp "Do you want to install it? (yes/y/no/n) " RES
+read -rp "Do you want to install the termux-api package? (yes/y/no/n) " RES
 
 USER_ANS=$(echo "${RES^}" | cut -c 1-1 )
 
 if [ $USER_ANS = "Y" ]; then
-  if [! apt-cache pkgnames | grep "termux-api" &>/dev/null]; then
-    printf "${CYAN}Installing termux-api package${RESET}\n"
-    pkg install termux-api
-    # WORK IN PROGRESS
+    printf "\n${CYAN}Installing termux-api package${RESET}\n"
     sleep 2
-  fi
+    pkg install termux-api
+    if [ $? -eq 0 ]; then
+  	  printf "${GREEN_B}termux-api package successfully installed${RESET}\n"
+  	  printf "${YELLOW}Termux app was installed via ${MAGENTA_B}${TERMUX_APK_RELEASE}${RESET}\n"
+      printf "${YELLOW}You will need to install the Termux:API app through that way too${RESET}\n"
+	  else
+  	  printf "${RED_B}An error occurred during termux-api installation${RESET}\n"
+	  fi
+    sleep 2
 fi
 
-printf "\n${CYAN}Installation Complete!${RESET}\n"
+printf "\n${CYAN_B}Installation Complete!${RESET}\n"
 printf "${CYAN}Just open the video you want to download in YouTube, click share, select Termux, choose a quality, and the download will start${RESET}\n"
 printf "${GREEN}For More Awesome and Useful Tools like this, Visit My website ©www.LearnTermux.tech${RESET}\n"
