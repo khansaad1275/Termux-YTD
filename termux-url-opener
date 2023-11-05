@@ -81,7 +81,7 @@ fi
 if [ $? -eq 0 ]; then
   printf "${GREEN_B}${TYPE} correctly downloaded at ${OUTPUT_PATH} !${RESET}\n"
 else
-  printf "${RED_B}There was an error when download the ${TYPE}!${RESET}\n"
+  printf "${RED_B}An error occurred when downloading the ${TYPE}!${RESET}\n"
 	exit 0
 fi
 
@@ -94,6 +94,8 @@ termux-media-scan -v -r "${OUTPUT_PATH}"
   	printf "${RED_B}An error occurred during the ${OUTPUT_PATH} scanning${RESET}\n"
 	fi
 fi
+
+read x
 
 
 #There's a cat on the code!!
