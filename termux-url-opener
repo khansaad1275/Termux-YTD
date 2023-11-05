@@ -1,37 +1,55 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+# COLORS
+GREEN="\e[32m"
+CYAN="\e[36m"
+MAGENTA="\e[35m"
+YELLOW="\e[33m"
+BLUE="\e[34m"
+RED="\e[31m"
+
+# BOLD COLORS
+GREEN_B="\e[01;32m"
+CYAN_B="\e[01;36m"
+MAGENTA_B="\e[01;35m"
+YELLOW_B="\e[01;33m"
+BLUE_B="\e[01;34m"
+RED_B="\e[01;31m"
+
+# RESET
+RESET="\e[0m"
+
 clear
-kill_color=$'\e[0m'
-command -v yt-dlp || printf "\e[031m Please install yt-dlp manually or run the the install.sh script again.\n$kill_color"
+command -v yt-dlp || printf "${RED_B} Please install yt-dlp manually or run the the install.sh script again.\n${RESET}"
 
 
-echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
-echo -e "\e[031m" "         ▄█░░▀▀▀▀▀░░█▄"
-echo -e "\e[031m" "     ▄▄  █░░░░░░░░░░░█  ▄▄"
-echo -e "\e[031m" "    █▄▄█ █░░█░░┬░░█░░█ █▄▄█"
-echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
-echo -e "\e[032m" "║ ♚ Project Name : 🆃🅴🆁🅼🆄🆇-🆈🆃🅳™           ║"
-echo -e "\e[032m" "║ ♚ Author : KhanSaad1275                ║"
-echo -e "\e[032m" "║ ♚ Github : g̲i̲t̲h̲u̲b̲.̲c̲o̲m̲/̲k̲h̲a̲n̲s̲a̲a̲d̲1̲2̲7̲5̲/̲    ║"
-echo -e "\e[032m" "║ ♚ Website : www.LearnTermux.tech       ║"
-echo -e "\e[036m" "╠════════════════════════════════════════╝"
-echo -e "\e[036m" "╠═▶ [𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁]  ➳"
-echo -e "\e[032m" "╠═▶ 1. Music Mp3♫"
-echo -e "\e[032m" "╠═▶ 2. Video 360p"
-echo -e "\e[032m" "╠═▶ 3. Video 480p"
-echo -e "\e[032m" "╠═▶ 4. Video 720p"
-echo -e "\e[032m" "╠═▶ 5. Video 1080p"
-echo -e "\e[032m" "╠═▶ 6. Video 2160p"
-echo -e "\e[032m" "╠═▶ 7. Exit Termux-YTD" # Added
+echo -e "${RED}" "          ▄▀▄     ▄▀▄"
+echo -e "${RED}" "         ▄█░░▀▀▀▀▀░░█▄"
+echo -e "${RED}" "     ▄▄  █░░░░░░░░░░░█  ▄▄"
+echo -e "${RED}" "    █▄▄█ █░░█░░┬░░█░░█ █▄▄█"
+echo -e "${CYAN}" "╔════════════════════════════════════════╗"                                                                          
+echo -e "${GREEN}" "║ ♚ Project Name : 🆃🅴🆁🅼🆄🆇-🆈🆃🅳™           ║"
+echo -e "${GREEN}" "║ ♚ Author : KhanSaad1275                ║"
+echo -e "${GREEN}" "║ ♚ Github : g̲i̲t̲h̲u̲b̲.̲c̲o̲m̲/̲k̲h̲a̲n̲s̲a̲a̲d̲1̲2̲7̲5̲/̲    ║"
+echo -e "${GREEN}" "║ ♚ Website : www.LearnTermux.tech       ║"
+echo -e "${CYAN}" "╠════════════════════════════════════════╝"
+echo -e "${CYAN}" "╠═▶ [𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁]  ➳"
+echo -e "${GREEN}" "╠═▶ 1. Music Mp3♫"
+echo -e "${GREEN}" "╠═▶ 2. Video 360p"
+echo -e "${GREEN}" "╠═▶ 3. Video 480p"
+echo -e "${GREEN}" "╠═▶ 4. Video 720p"
+echo -e "${GREEN}" "╠═▶ 5. Video 1080p"
+echo -e "${GREEN}" "╠═▶ 6. Video 2160p"
+echo -e "${GREEN}" "╠═▶ 7. Exit Termux-YTD" # Added
 
 #Edit From Oak Atsume 
-printf "\e[032m ╚═:➤  $kill_color"
+printf "${GREEN} ╚═:➤  ${RESET}"
 read option
 
 if [[ -z $option ]];
 then
 	clear
-	printf "\e[031m Please choose a option!\n$kill_color"
+	printf "${RED} Please choose a option!\n${RESET}"
 else
 case $option in #Make Case list
 	1)
@@ -58,6 +76,7 @@ case $option in #Make Case list
 esac 
 fi
 
+termux-media-scan -v -r /storage/emulated/0/Youtube
 
 #There's a cat on the code!!
 #          ▄▀▄     ▄▀▄

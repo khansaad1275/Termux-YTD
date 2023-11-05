@@ -12,4 +12,4 @@
 # Continue with next video on download errors;e.g. to skip unavailable videos in a playlist (default)
 --no-abort-on-error
 # Defines the path where the videos will be saved and the format the filenames will have
--o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s
+-o ~/storage/shared/Youtube/%(title)s.%(ext)s
