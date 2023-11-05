@@ -66,6 +66,15 @@ mv termux-url-opener "${TERMUX_HOME}/bin"
 chmod +x "${TERMUX_HOME}/bin/termux-url-opener"
 sleep 2
 
+# Install the termux api and tell the user that
+# his video wont appear on the system gallery unless
+# the termux api app is installed
+if ! apt-cache pkgnames | grep "termux-api" &>/dev/null; then                                                 printf '\e[0;36mInstalling termux-api package\e[0m\n'            sleep 2                                              pkg install termux-api
+		printf '\e[0;36mWARNING!!!\nBy default the videos you download wont appear in your system gallery, and therefore you wont be able to use them/nIf you wish to see the video appear in your gallery youll have to install the COLOR termux-api app COLOR (I recommend using fdroid)\e[0m\n'		
+fi
+
+
+
 printf '\n\e[0;36mInstallation Complete!\e[0m\n'
 printf '\e[0;36mJust open the video you want to download in youtube, click share, select termux, choose a quality, and the download will start\e[0m\n'
 printf '\e[0;32mFor More Awesome and Useful Tool like this Visit My website ©www.LearnTermux.tech\e[0m\n'
