@@ -22,7 +22,6 @@ RESET="\e[0m"
 clear
 command -v yt-dlp || printf "${RED_B} Please install yt-dlp manually or run the the install.sh script again.\n${RESET}"
 OUTPUT_PATH="/storage/emulated/0/Youtube"
-TYPE="video"
 
 echo -e "${RED}" "          ▄▀▄     ▄▀▄"
 echo -e "${RED}" "         ▄█░░▀▀▀▀▀░░█▄"
@@ -55,7 +54,6 @@ else
 case $option in #Make Case list
 	1)
 	yt-dlp -f 140 $1
-	TYPE="audio"
 	;;
 	2)
 	yt-dlp -f "best[height<=360]" $1
@@ -79,9 +77,9 @@ esac
 fi
 
 if [ $? -eq 0 ]; then
-  printf "${GREEN_B}${TYPE} correctly downloaded at ${OUTPUT_PATH} !${RESET}\n"
+  printf "${GREEN_B}Files correctly downloaded at ${OUTPUT_PATH} !${RESET}\n"
 else
-  printf "${RED_B}An error occurred when downloading the ${TYPE}!${RESET}\n"
+  printf "${RED_B}An error occurred when downloading the files!${RESET}\n"
 	exit 0
 fi
 
