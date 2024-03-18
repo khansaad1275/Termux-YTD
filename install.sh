@@ -39,13 +39,6 @@ if [ ! -d "${TERMUX_HOME}/storage/shared/Youtube" ]; then
   mkdir "${TERMUX_HOME}/storage/shared/Youtube"
 fi
 
-# Create the directory for our config file.
-if [ ! -d "${TERMUX_HOME}/.config/youtube-dl" ]; then
-  printf '\e[0;36mCreating config directory for yt-dlp\e[0m\n'
-  sleep 2
-  mkdir -p "${TERMUX_HOME}/.config/yt-dlp"
-fi
-
 # Install the url opener.
 printf '\e[0;36mInstalling Termux-YTD\e[0m\n'
 mkdir -p "${TERMUX_HOME}/bin"
