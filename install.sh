@@ -13,7 +13,7 @@ apt-get update && apt-get upgrade -y
 
 # If the storage directory does not exist run termux-setup-storage.
 if [ ! -d "${TERMUX_HOME}/storage" ]; then
-  printf '\e[0;36mRequesting acces to storage\e[0m\n'
+  printf '\e[0;36mRequesting access to storage\e[0m\n'
   sleep 2
   termux-setup-storage
 fi
@@ -26,10 +26,10 @@ if ! apt-cache pkgnames | grep "^python$" &>/dev/null; then
 fi
 
 # Install the youtube-dl python module if it isnt installed.
-if ! pip list | grep "^youtube-dl" &>/dev/null; then
-  printf '\e[0;36mInstalling youtube-dl\e[0m\n'
+if ! pip list | grep "^yt-dlp" &>/dev/null; then
+  printf '\e[0;36mInstalling yt-dlp\e[0m\n'
   sleep 2
-  pip install youtube-dl
+  pip install yt-dlp
 fi
 
 # Create the output directory if needed.
@@ -41,9 +41,9 @@ fi
 
 # Create the directory for our config file.
 if [ ! -d "${TERMUX_HOME}/.config/youtube-dl" ]; then
-  printf '\e[0;36mCreating config directory for youtube-dl\e[0m\n'
+  printf '\e[0;36mCreating config directory for yt-dlp\e[0m\n'
   sleep 2
-  mkdir -p "${TERMUX_HOME}/.config/youtube-dl"
+  mkdir -p "${TERMUX_HOME}/.config/yt-dlp"
 fi
 
 # Install the url opener.
