@@ -25,6 +25,13 @@ if ! apt-cache pkgnames | grep "^python$" &>/dev/null; then
   apt-get install python -y
 fi
 
+# If PYPI is not installed, install it
+if ! command -v pip &> /dev/null; then
+  printf '\e[0;36mInstalling pip\e[0m\n'
+  sleep 2
+  pkg install python-pip
+fi
+
 # Install the youtube-dl python module if it isnt installed.
 if ! pip list | grep "^yt-dlp" &>/dev/null; then
   printf '\e[0;36mInstalling yt-dlp\e[0m\n'
