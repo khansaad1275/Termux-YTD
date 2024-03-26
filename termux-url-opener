@@ -1,4 +1,3 @@
-#!/data/data/com.termux/files/usr/bin/bash
 
 # COLORS
 GREEN="\e[32m"
