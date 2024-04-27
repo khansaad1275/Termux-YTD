@@ -18,6 +18,10 @@ Update(){
         printf '\e[0;36mUpdating Linux-YTD\e[0m\n'
         sleep 2
         rm "/usr/bin/linux-ytd"
+        wget "https://github.com/MMT007/Termux-YTD/raw/master/linux-ytd"
+        chmod +x linux-ytd
+        mv "linux-ytd" "/usr/bin/"
+        printf '\e[0;36mDone!\e[0m\n'
     fi
 }
 Uninstall(){

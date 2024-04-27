@@ -24,9 +24,29 @@ Instagram : https://www.instagram.com/skhan_official/ <br>
 <br>
 
 ### Installation & Usage:
-Read This post for installation and usage, I have explained everything using screenshots.
 
-https://www.learntermux.tech/2020/04/Termux-Youtube-Video-Downloader.html
+#### Linux :
+```
+wget "https://github.com/MMT007/Termux-YTD/raw/master/linux-ytd"
+chmod +x linux-ytd 
+mv "linux-ytd" "/usr/bin/"
+```
+
+#### Termux :
+
+IF Git Is NOT Installed:
+```
+apt update
+apt upgrade
+pkg install git -y 
+```
+
+If Git Is Installed:
+```
+git clone https://github.com/MMT007/Termux-YTD/raw/master/linux-ytd
+cd Termux-YTD/etc
+bash install.sh
+```
 
 <br>
 <br>
