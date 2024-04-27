@@ -19,7 +19,7 @@ Update(){
         sleep 2
         rm "~/bin/termux-url-opener"
         cd "~/bin"
-        wget "https://github.com/MMT007/Termux-YTD/raw/master/termux-url-opener"
+        wget "https://github.com/MMT007/Termux-YTD/raw/master/opener/termux-url-opener"
         chmod +x "termux-url-opener"
         cd "~/"
         printf '\e[0;36mDone!\e[0m\n'

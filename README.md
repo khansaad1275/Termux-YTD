@@ -27,7 +27,7 @@ Instagram : https://www.instagram.com/skhan_official/ <br>
 
 #### Linux :
 ```
-wget "https://github.com/MMT007/Termux-YTD/raw/master/linux-ytd"
+wget "https://github.com/MMT007/Termux-YTD/raw/master/bin/linux-ytd"
 chmod +x linux-ytd 
 mv "linux-ytd" "/usr/bin/"
 ```
@@ -43,7 +43,7 @@ pkg install git -y
 
 If Git Is Installed:
 ```
-git clone https://github.com/MMT007/Termux-YTD/raw/master/linux-ytd
+git clone https://github.com/MMT007/Termux-YTD.git
 cd Termux-YTD/etc
 bash install.sh
 ```
