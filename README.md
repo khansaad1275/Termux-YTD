@@ -29,7 +29,7 @@ Instagram : https://www.instagram.com/skhan_official/ <br>
 ```
 wget "https://github.com/MMT007/Termux-YTD/raw/master/bin/linux-ytd"
 chmod +x linux-ytd 
-mv "linux-ytd" "/usr/bin/"
+sudo mv "linux-ytd" "/usr/bin/"
 ```
 
 #### Termux :
