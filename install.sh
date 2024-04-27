@@ -29,7 +29,7 @@ fi
 if ! command -v pip &> /dev/null; then
   printf '\e[0;36mInstalling pip\e[0m\n'
   sleep 2
-  pkg install python-pip
+  pkg install pip
 fi
 
 # Install the youtube-dl python module if it isnt installed.
@@ -49,7 +49,7 @@ fi
 # Install the url opener.
 printf '\e[0;36mInstalling Termux-YTD\e[0m\n'
 mkdir -p "${TERMUX_HOME}/bin"
-mv termux-url-opener "${TERMUX_HOME}/bin"
+cp ../opener/termux-url-opener "${TERMUX_HOME}/bin"
 chmod +x "${TERMUX_HOME}/bin/termux-url-opener"
 sleep 2
 
