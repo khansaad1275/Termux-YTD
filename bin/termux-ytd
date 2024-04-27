@@ -1,0 +1,76 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+Help(){
+    echo "Command For Termux-YTD"
+    echo
+    echo "Syntax: termux-ytd [-h|-u|-U]"
+    echo "        termux-ytd [link] (-m)"
+    echo "Options:"
+    echo "-h|--help         Show This Help Menu"
+    echo "-u|--update       Updates The Downloader"
+    echo "-U|--uninstall    Uninstall The Downloader"
+}
+
+Update(){
+    printf '\e[0;36mUpdating Termux-YTD\e[0m\n'
+
+    if [ -f "/usr/bin/linux-ytd" ]; then
+        printf '\e[0;36mUpdating Termux-YTD\e[0m\n'
+        sleep 2
+        rm "~/bin/termux-url-opener"
+        cd "~/bin"
+        wget "https://github.com/MMT007/Termux-YTD/blob/master/opener/termux-url-opener"
+        chmod +x "termux-url-opener"
+        cd "~/"
+        printf '\e[0;36mDone!\e[0m\n'
+    fi
+}
+Uninstall(){
+    printf '\e[0;36mUninstalling Termux-YTD\e[0m\n'
+
+    if [ -f "/usr/bin/termux-ytd" ]; then
+        printf '\e[0;36mRemoving Linux-YTD\e[0m\n'
+        sleep 2
+        rm "~/bin/termux-ytd"
+        rm "~/../usr/bin/termux-ytd"
+    fi
+
+    printf '\e[0;36mAll Done!!\e[0m\n'
+}
+Link(){
+    musictoggle="-f mp4"
+
+    if [[ $2 == "-m" ]]; then
+        musictoggle="-x --audio-format opus"
+    fi
+
+    if [[ $1 == https://* ]]; then
+        musictoggle+=" -o ./%(title)s.%(ext)s --no-mtime -i"
+        yt-dlp $musictoggle "$1"
+        exit
+    fi
+
+    printf '\e[0;36m'$1' Is Not A Valid Link\e[0m\n'
+}
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+    --update|-u)
+        Update
+        exit;;
+    --uninstall|-U)
+        Uninstall
+        exit;;
+    --help|-h)
+        Help
+        exit;;
+    *)
+        Link $1 $2
+        exit;;
+    esac
+shift 1
+done
+
+if [ -z "$1" ]; then
+    Help
+fi

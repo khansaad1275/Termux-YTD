@@ -1,0 +1,85 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+clear
+kill_color=$'\e[0m'
+command -v yt-dlp &>/dev/null || printf "\e[031m Please install yt-dlp manualy or run the the install.sh script again.\n$kill_color"
+
+
+echo -e "\e[031m" "          ▄▀▄     ▄▀▄"
+echo -e "\e[031m" "         ▄█░░▀▀▀▀▀░░█▄"
+echo -e "\e[031m" "     ▄▄  █░░░░░░░░░░░█  ▄▄"
+echo -e "\e[031m" "    █▄▄█ █░░█░░┬░░█░░█ █▄▄█"
+echo -e "\e[036m" "╔════════════════════════════════════════╗"                                                                          
+echo -e "\e[032m" "║ ♚ Project Name : 🆃🅴🆁🅼🆄🆇-🆈🆃🅳™           ║"
+echo -e "\e[032m" "║ ♚ Author : KhanSaad1275                ║"
+echo -e "\e[032m" "║ ♚ Github : g̲i̲t̲h̲u̲b̲.̲c̲o̲m̲/̲k̲h̲a̲n̲s̲a̲a̲d̲1̲2̲7̲5̲/̲    ║"
+echo -e "\e[032m" "║ ♚ Website : www.LearnTermux.tech       ║"
+echo -e "\e[036m" "╠════════════════════════════════════════╝"
+echo -e "\e[036m" "╠═▶ [𝗦𝗲𝗹𝗲𝗰𝘁 𝗔 𝗙𝗼𝗿𝗺𝗮𝘁]  ➳"
+echo -e "\e[032m" "╠═▶ 1. Music Mp3♫"
+echo -e "\e[032m" "╠═▶ 2. Video 360p"
+echo -e "\e[032m" "╠═▶ 3. Video 480p"
+echo -e "\e[032m" "╠═▶ 4. Video 720p"
+echo -e "\e[032m" "╠═▶ 5. Video 1080p"
+echo -e "\e[032m" "╠═▶ 6. Video 2160p (Not Recomended For Most Videos)"
+echo -e "\e[032m" "╠═▶ 7. Exit Termux-YTD" # Added
+
+command="-o ~/storage/shared/Youtube/%(title)s.%(ext)s --no-mtime -i "
+
+#Edit From Oak Atsume 
+printf "\e[032m ╚═:➤  $kill_color"
+read option
+
+if [[ -z $option ]];
+then
+	clear
+	printf "\e[031m Please choose a option!\n$kill_color"
+else
+case $option in #Make Case list
+	1)
+    command+="-x --audio-format opus"
+	yt-dlp $command $1 #option 1
+	;;
+	2)
+    command+="-f best[height<=360]"
+	yt-dlp $command $1 #option 2
+	;;
+	3)
+    command+="-f best[height<=480]"
+	yt-dlp $command $1 #option 3
+	;;
+	4)
+    command+="-f best[height<=720]"
+	yt-dlp $command $1 #option 4
+	;;
+	5)
+    command+="-f best[height<=1080]"
+	yt-dlp $command $1 #option 5
+	;;
+	6)
+    command+="-f best[height<=2160]"
+    yt-dlp $command $1 #option 6
+	;;
+	7)
+	break #option 7
+	;;
+esac 
+fi
+
+
+#There's a cat on the code!!
+#          ▄▀▄     ▄▀▄
+#         ▄█░░▀▀▀▀▀░░█▄
+#     ▄▄  █░░░░░░░░░░░█  ▄▄
+#    █▄▄█ █░░█░░┬░░█░░█ █▄▄█
+
+#Oh hey there It's me Oak I have no idea how youtube-dl works but i came across this github and saw the messy code and gave it a better look hope it helps :D 
+
+#~MMT007 was here :D
+
+#I wanted to mess a little with the Download code but didn't 
+
+#email: Kamilohulau@gmail.com
+#Date: Wed Dec  2 15:48:19 PST 2020#
+#Project name : Termux-YTD#
+#Github: https://github.com/khansaad1275/Termux-YTD#

@@ -1,0 +1,70 @@
+#!/usr/bin/bash
+
+Help(){
+    echo "Command For Linux-YTD"
+    echo
+    echo "Syntax: linux-ytd [-h|-u|-U]"
+    echo "        linux-ytd [link] (-m)"
+    echo "Options:"
+    echo "-h|--help         Show This Help Menu"
+    echo "-u|--update       Updates The Downloader"
+    echo "-U|--uninstall    Uninstall The Downloader"
+}
+
+Update(){
+    printf '\e[0;36mUpdating Linux-YTD\e[0m\n'
+
+    if [ -f "/usr/bin/linux-ytd" ]; then
+        printf '\e[0;36mUpdating Linux-YTD\e[0m\n'
+        sleep 2
+        rm "/usr/bin/linux-ytd"
+    fi
+}
+Uninstall(){
+    printf '\e[0;36mUninstalling Linux-YTD\e[0m\n'
+
+    if [ -f "/usr/bin/linux-ytd" ]; then
+        printf '\e[0;36mRemoving Linux-YTD\e[0m\n'
+        sleep 2
+        rm "/usr/bin/linux-ytd"
+    fi
+
+    printf '\e[0;36mAll Done!!\e[0m\n'
+}
+Link(){
+    musictoggle="-f mp4"
+
+    if [[ $2 == "-m" ]]; then
+        musictoggle="-x --audio-format opus"
+    fi
+
+    if [[ $1 == https://* ]]; then
+        musictoggle+=" -o ./%(title)s.%(ext)s --no-mtime -i"
+        yt-dlp $musictoggle "$1"
+        exit
+    fi
+
+    printf '\e[0;36m'$1' Is Not A Valid Link\e[0m\n'
+}
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+    --update|-u)
+        Update
+        exit;;
+    --uninstall|-U)
+        Uninstall
+        exit;;
+    --help|-h)
+        Help
+        exit;;
+    *)
+        Link $1 $2
+        exit;;
+    esac
+shift 1
+done
+
+if [ -z "$1" ]; then
+    Help
+fi
