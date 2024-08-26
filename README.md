@@ -34,7 +34,7 @@ https://www.learntermux.tech/2020/04/Termux-Youtube-Video-Downloader.html
 ### Features:
 - See The Downloading Process.
 - Download any Video in Just 2 Click.
-- Select the Quality Of your Video.
+- Select the Quality Of your Video. 
 - Downlaod Mp3 Version of the Video.
 
 <br>
