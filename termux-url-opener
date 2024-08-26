@@ -102,7 +102,7 @@ read x
 #     ▄▄  █░░░░░░░░░░░█  ▄▄
 #    █▄▄█ █░░█░░┬░░█░░█ █▄▄█
 
-#Oh hey there It's me Oak I have no idea how youtube-dl (now yt-dlp) works but i came across this github and saw the messy code and gave it a better look hope it helps :D 
+#Oh hey there It's me Oak I have no idea how youtube-dl (now yt-dlp) works but i came across this github an,and edited a few things hope it helps :D 
 
 #I wanted to mess a little with the Download code but didn't 
 
@@ -130,3 +130,5 @@ read x
 #Date: Wed Dec  2 15:48:19 PST 2020#
 #Project name : Termux-YTD#
 #Github: https://github.com/khansaad1275/Termux-YTD#
+
+# -----------------------------------------------------
